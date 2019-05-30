@@ -6,4 +6,1604 @@
 @import url('components/flex-grid.css');
 @import url('components/buttons.css');
 @import url('components/forms.css');
+@import url('components/flex-grid.css');
 
+/* ------------------------------------------------------------------------------------------ */
+*{
+    font-family: var(--standard-font-family);
+    font-size: var(--standard-font-size);
+    font-weight: 600;
+    scroll-behavior: smooth;
+}
+  
+/* ****************************** */
+
+/* BACKGROUND IMAGE */
+.backgroundimage {
+    background-image: url(../images/background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+/* ****************************** */
+
+/* HEADER */
+header{ 
+    align-items: center;
+    border-radius: 3px; 
+    /* border: 3px solid black; */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 185px;
+    justify-content: space-around;
+    margin: 0px;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    transform: translate(0,-35px);
+}
+
+/* BLUR ON HEADER */
+header::before{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -20px;
+    content:'';
+    filter:blur(10px);
+    left:-20px;
+    position: absolute;
+    right:-20px;
+    top:-20px;
+
+    background-attachment: fixed;
+    background-image: url(../images/background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* WHITE BEHIND HEADER */
+header::after{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -55px;
+    content:'';
+    left:-55px;
+    position: absolute;
+    right:-55px;
+    top:-55px;
+    opacity: 0.2;
+    transform: translate(0,35px);
+}
+
+/* 2NIGHT LOGO IN HEADER */
+header img{
+    position: relative;
+    z-index: 2;
+}
+
+/* NAV MENU IN HEADER */
+header ul{
+    /* border: 1px solid black; */
+    color:var(--r-color);
+    display: flex;
+    justify-content: space-between;
+    list-style: none; 
+    position: relative;
+    width: 90%;
+    z-index: 2;
+    padding: 0;
+}
+
+header a{
+    color:var(--r-color);
+    text-decoration: none;
+}
+
+header li{
+    border: 2px solid transparent;
+}
+
+
+header li:hover a{
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.822);
+    transition-duration: 0.3s;
+}
+
+header .active{
+    border-bottom: 2px solid var(--r-color);
+    cursor: pointer;
+}
+
+header .active:hover{
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.822);
+    transition-duration: 0.3s;
+}
+
+/* LANGUAGE MENU TOP RIGHT */
+.top{
+    height: 20px;
+    /* border: 1px solid black; */
+    width: 100%;
+    padding: 0%;
+}
+
+.top .usethis{
+    position: relative;
+}
+
+.language{
+    position: absolute;
+    right: 10%;
+    top: 5px;
+    /* border: 1px solid black; */
+}
+
+.current{
+    width: 35px;
+    height: 14px;
+    background-color: var(--r-color);
+    cursor: pointer;
+    color: white;
+    border-radius: 9px;
+    font-size: 10pt;
+    text-transform: uppercase;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    height: 18px;
+    z-index: 5;
+    position: relative;
+}
+
+.language:hover .current{
+    transition-duration: 0.1s;
+    border-radius: 9px 9px 0 0;
+}
+
+.dropdown{
+    transition: max-height 0.3s ease-out;
+    position: absolute;
+    top: 0;
+    width: 35px;
+    background-color: var(--r-color);
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    border-radius: 9px;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0px;
+    line-height: 0px;
+    z-index: 4;
+}
+
+.dropdown a{
+    text-decoration: none;
+    color: white;
+    font-size: 10pt;
+    text-transform: uppercase;
+    padding: 0 0 5px 0;
+}
+
+.dropdown .invisible{
+    color: var(--r-color);
+}
+
+.language:hover .dropdown{
+    display: block;
+    max-height: 110px;
+    line-height: 16pt;
+}
+
+.dropdown a:hover{
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+    color: rgb(243, 146, 173);
+    transition: 0.3s ease-out;
+}
+/* ****************************** */
+
+.divforboekenandzwembad{
+    /* border: 3px solid black; */
+    display: flex;
+    height: 450px;
+    justify-content: space-between;
+    padding: 0%;
+    position: relative;
+    transform: translate(0,-35px);
+}
+
+/* BOEKEN */
+.boeken{
+    border-radius: 3px;    
+    /* border: 3px solid black; */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0 0 0;
+    box-sizing: border-box;
+    
+}
+
+/* BLUR ON BOEKEN */
+.boeken::before{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -55px;
+    content:'';
+    filter:blur(10px);
+    left:-55px;
+    position: absolute;
+    right:-55px;
+    top:-55px;
+
+    background-attachment: fixed;
+    background-image: url(../images/background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(0,35px);
+}
+
+/* WHITE BEHIND BOEKEN */
+.boeken::after{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -55px;
+    content:'';
+    left:-55px;
+    position: absolute;
+    right:-55px;
+    top:-55px;
+    opacity: 0.2;
+    transform: translate(0,35px);
+}
+
+/* VOLWASSENEN */
+.volwassenen{
+    align-items: center;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+/* HOUDT ICON EN TEKST SAMEN BIJ VOLWASSENEN EN KINDEREN */
+.boeken .icontext{
+    /* border: 1px solid black; */
+    align-items: center;
+    color: var(--r-color);
+    display: flex;
+    font-size: 18pt;
+    height: 50px;
+    justify-content: center;
+    width: 260px;
+
+}
+
+/* TEKST VAN ONDERDEEL VOLWASSENEN EN  KINDEREN */
+.boeken .icontext p{
+    margin: 0 0 0 10px;
+
+}
+
+/* BUTTONS VOLWASSENEN */
+.volwassenen .buttons {
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    list-style:none;
+    padding:0;
+    width: 260px;
+    margin: 5px 0 0 0;
+}
+
+.volwassenen .buttons li {
+
+    width:35px;
+    height:35px;
+    position:relative;
+}
+
+.volwassenen .buttons label, .buttons input {
+   display:block;
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+}
+
+.volwassenen .buttons input[type="radio"] {
+   opacity:0.011;
+   z-index:100;
+}
+
+.volwassenen .buttons input[type="radio"]:checked + label {
+   background:var(--r-color);
+   color: white;
+}
+
+.volwassenen .buttons label {
+    padding:5px;
+    /* border:1px solid #CCC;  */
+    cursor:pointer;
+   z-index:90;
+   background:#FA628D;
+   border-radius: 6px;
+   font-size: 18pt;
+   text-align: center;
+   color: var(--r-color);
+}
+
+.volwassenen .buttons label:hover {
+    background:rgb(245, 66, 117);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.301);
+    transition: 0.3s ease-out;
+}
+
+/* KINDEREN */
+.kinderen{
+    align-items: center; 
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+
+}
+
+/* BUTTONS KINDEREN */
+.buttons2 {
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    list-style:none;
+    padding:0;
+    width: 260px;
+    margin: 5px 0 0 0;
+}
+
+.buttons2 li {
+
+    width:35px;
+    height:35px;
+    position:relative;
+}
+
+.buttons2 label, .buttons2 input {
+   display:block;
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+}
+
+.buttons2 input[type="radio"] {
+   opacity:0.011;
+   z-index:100;
+}
+
+.buttons2 input[type="radio"]:checked + label {
+   background:var(--r-color);
+   color: white;
+}
+
+.buttons2 label {
+    /* border:1px solid #000;  */
+    cursor:pointer;
+    padding:5px;
+    background:#FA628D;
+    border-radius: 6px;
+    font-size: 18pt;
+    z-index:90;
+    text-align: center;
+   color: var(--r-color);
+}
+
+.buttons2 label:hover {
+    background:rgb(245, 66, 117);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.301);
+    transition: 0.3s ease-out;
+}
+
+/* AANKOMST */
+.boeken .aankomst, .vertrek{
+    align-items: center;
+    /* border: 1px solid black; */
+    color: var(--r-color);
+    display: flex;
+    font-size: 18pt;
+    justify-content: space-between;
+    position: relative;
+    width: 65%;
+    z-index: 2;
+}
+
+/* DIV DIE TEKST EN INPUT SAMEN HOUD */
+.holdittogether{
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    height: fit-content;
+    margin: 0 0 0 10px;
+}
+
+/* DIV MET ALLE INPUTVELDEN IN */
+.boeken .inputtogether{
+    display: flex;
+    /* border: 1px solid black; */
+    height: fit-content;
+    margin: 0 0 0 5px;
+}
+
+/* ALLE INPUTVELDEN */
+.boeken input{
+    border-radius: 6px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 16pt;
+    height: 35px;
+    margin: 0 3px;
+    padding: 0 3px;
+    display: block;
+}
+
+/* INPUTVELD 1 & 2 */
+.boeken #date1, #date2{
+    width: 35px;
+}
+
+/* INPUTVELD 3 */
+.boeken #date3{
+    width: 70px;
+}
+
+.boeken .text{
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* ZOEKEN */
+.boeken .zoeken{
+    align-items: center;
+    background-color: var(--r-color);
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-size: 18pt;
+    height: 55px;
+    justify-content: center;
+    margin: 30px 0;
+    position: relative;
+    width: 330px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.boeken .zoeken:hover{
+    background-color: rgb(226, 28, 84);
+    transition-duration: 0.3s;
+}
+
+.boeken .zoeken:active{
+    background-color: rgb(192, 0, 54);
+}
+
+/* ****************************** */
+
+/* ZWEMBAD */
+.zwembad{
+    border-radius: 3px;    
+    /* border: 3px solid black; */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 20px 30px;
+    box-sizing: border-box; 
+}
+
+/* BLUR ON ZWEMBAD */
+.zwembad::before{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -55px;
+    content:'';
+    filter:blur(10px);
+    left:-55px;
+    position: absolute;
+    right:-55px;
+    top:-55px;
+    
+    background-attachment: fixed;
+    background-image: url(../images/background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transform: translate(0,35px);
+
+}
+
+/* WHITE BEHIND ZWEMBAD */
+.zwembad::after{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -55px;
+    content:'';
+    left:-55px;
+    position: absolute;
+    right:-55px;
+    top:-55px;
+    opacity: 0.2;
+    transform: translate(0,35px);
+}
+
+.zwembad .pool{
+    background-image: url(../images/pool.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+    height: 50%;
+    margin: 0 0 15px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.zwembad h1{
+    /* border: 3px solid black; */
+    color: var(--r-color);
+    display: block;
+    margin: 0 0 0px 0;
+    padding: 0%;
+    position: relative;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+    z-index: 2;
+}
+.zwembad p{
+    /* border: 3px solid black; */
+    box-sizing: content-box;
+    color: white;
+    font-size: 14pt;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    text-shadow: 0 0 30px rgb(0, 0, 0);
+    width: 90%;
+    z-index: 2;
+}
+.zwembad .wifi{
+    position: relative;
+    z-index: 2;
+}
+
+/* ARROW */
+.divforboekenandzwembad #arrow{
+    /* border: 3px solid black; */
+    background-image: url(../images/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -40px;
+    display: block;
+    height: 25px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-12.5px,20px);
+    width: 25px;
+
+}
+
+/* ****************************** */
+
+/* FOOTER */
+
+/* INFO SECTION */
+.info{
+    background-color: white;
+    display: flex;
+    height: 111px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.info .follow{
+    align-items: center;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 0%;
+    width: 20%;
+}
+
+.info .follow p{
+    color: var(--r-color);
+    font-size: 14pt;
+    margin: 0%;
+    padding: 0 0 10px 0;
+    text-align: center;
+}
+
+.info .contact{
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 0%;
+    width: 20%;
+}
+
+.info .contact p{
+    color: var(--r-color);
+    font-size: 14pt;
+    margin: 0%;
+    padding: 0;
+    text-align: center;
+}
+
+.info .adres{
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 0%;
+    width: 20%;
+}
+
+.info .adres p{
+    color: var(--r-color);
+    font-size: 14pt;
+    margin: 0%;
+    padding: 0;
+    text-align: center;
+}
+
+/* ****************************** */
+
+/* NIEUWSBRIEF SECTION*/
+.nieuwsbrief{
+    align-items: center;
+    background-color: var(--y-color);
+    box-sizing: border-box;
+    display: flex;
+    height: 161px;
+    justify-content: center;
+    padding: 0 150px;
+    width: 100%;
+}
+
+.nieuwsbrief h1{
+    color: white;
+    font-size: 20pt;
+    margin: 10px;
+    text-align: center;
+}
+
+.iconandinput{
+    position: relative;
+}
+
+.iconandinput img{
+    left: 35px;
+    position: relative;
+}
+
+.nieuwsbrief #email{
+    background-color: rgba(255, 255, 255, .25);
+    border-radius: 3px 0 0 3px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 42px;
+    padding: 0 0 0 40px;
+    width: 536px;
+}
+
+.nieuwsbrief #email::placeholder{
+    color: rgba(255, 255, 255, .50);
+    font-size: 14pt;
+}
+
+.nieuwsbrief button{
+    align-items: center;
+    background-color: var(--b-color);
+    border-radius: 0 3px 3px 0;
+    border: none;
+    color: #fff;  
+    display: flex;
+    font-size: 20px;
+    height: 42px;
+    justify-content: space-around;
+    width: 184px;
+}
+
+.nieuwsbrief button:hover{
+    background-color: #0a85aa;
+    transition-duration: 0.3s;
+}
+
+.nieuwsbrief button:active{
+    background-color: #085e79;
+}
+
+.nieuwsbrief p{
+    /* border: 1px solid black; */
+    color: white;
+    font-size: 12pt;
+    line-height: 19pt;
+    margin: 10px;
+    text-align: center;
+}
+
+/* ****************************** */
+
+/* INFO 2, PAYMENT METHODS SECTION*/
+.infotwo{
+    align-items: center;
+    background-color: #F6F6F6;
+    display: flex;
+    height: 150px;
+    justify-content: space-around;
+
+}
+
+/* PAYMENT METHOD DIV */
+.infotwo .pay{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: 75px;
+    justify-content: left;
+    padding: 0%;
+    margin: 0%;
+}
+
+.infotwo .pay p{
+    /* border: 1px solid black; */
+    color: var(--grey-color);
+    font-size: 16pt;
+    transform: translate(0,-20px);
+}
+
+/* DIV FOR ALL PAYMENT IMAGES */
+.infotwo .payimages{
+    /* border: 1px solid black; */
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    transform: translate(0,-35px);
+    width: 90%;
+}
+
+/* PAYMENT IMAGES */
+.infotwo .payimages .img{
+    /* border: 1px solid black; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 35px;
+    width: 35px;
+}
+
+.infotwo .payimages .ideal{
+    background-image: url(../images/betalingsmethodes/iDEAL.png)
+}
+.infotwo .payimages .mastercard{
+    background-image: url(../images/betalingsmethodes/Mastercard.png)
+}
+.infotwo .payimages .visa{
+    background-image: url(../images/betalingsmethodes/visa_PNG30.png)
+}
+.infotwo .payimages .maestro{
+    background-image: url(../images/betalingsmethodes/Maestro.png)
+}
+.infotwo .payimages .paypal{
+    background-image: url(../images/betalingsmethodes/paypal.png)
+}
+.infotwo .payimages .applepay{
+    background-image: url(../images/betalingsmethodes/Apple_Pay.png)
+}
+.infotwo .payimages .axp{
+    background-image: url(../images/betalingsmethodes/AXP.png)
+}
+
+
+/* WIFI AND PARKING DIV */
+.infotwo .wifiandparking{
+    /* border: 1px solid black; */
+    display: flex;
+    height: 90px;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* WIFI */
+.infotwo .wifiandparking .wifi{
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.infotwo .wifiandparking .wifi p{
+    /* border: 1px solid black; */
+    color: var(--grey-color);
+    font-size: 16pt;
+    margin: 0%;
+}
+
+/* PARKING */
+.infotwo .wifiandparking .parking{
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.infotwo .wifiandparking .parking p{
+    /* border: 1px solid black; */
+    color: var(--grey-color);
+    font-size: 16pt;
+    margin: 0%;
+}
+
+/* ****************************** */
+
+/* COPYRIGHT INFO SECTION*/
+.copyright{
+    /* border: 1px solid black; */
+    background-color: white;
+    height: 39px;
+    width: 100%;
+    color: var(--grey-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 0;
+}
+
+/* COPYRIGHT INFO / TEXT */
+.copyright p{
+    /* border: 1px solid black; */
+    display: block;
+    font-size: 12pt;
+    text-align: center;
+    transform: translate(0,-10px);
+    width: 300px;
+}
+
+/* COPYRIGHT INFO / LINKS */
+.copyright a{
+    /* border: 1px solid black; */
+    color: var(--grey-color);
+    display: block;
+    font-size: 12pt;
+    text-align: center;
+    text-decoration: none;
+    transform: translate(0,-10px);
+    width: 300px;
+}
+
+/* COPYRIGHT INFO / BACK TO TOP LINK */
+#backtotop{
+    /* border: 1px solid black; */
+    color: var(--grey-color);
+    font-size: 12pt;
+    height: fit-content;
+    transform: translate(0,-10px);
+    border-radius: 3px;
+    width: auto;
+    padding: 3px;
+}
+
+#backtotop:hover{
+    text-decoration: underline;
+}
+
+/* ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
+
+/* mobile */
+@media (min-width: 320px) {
+    .backgroundimage {
+        /* background-image: none; */
+        /* background-color: blue; */
+    }
+    *{
+        font-size: 10pt;
+    }
+    h1{
+        font-size: 15pt;
+    }
+    .row.top{
+        display: none;
+    } 
+    .row .top div{
+        display: none;
+    }
+    /* HEADER----------------------------------------------- */
+    .language{
+        display: none;
+    }  
+    header{ 
+        border-radius: 0px; 
+        height: 120px;
+    }
+    #menu{
+        position: absolute;
+        top: 50%;
+        transform: translate(0,-9px);
+        left: 10%;
+        cursor: pointer;
+    }
+    /* NAV________________________ */
+    header ul{
+        display: none;
+    }
+    /* MIDDLE----------------------------------------------- */
+    /* BOEKEN________________________ */
+    .volwassenen .buttons,.buttons2{
+        width: 160px;
+    }
+    .boeken .zoeken{
+        font-size: 12pt;
+        width: 140px;
+    }
+    .boeken input{
+        font-size: 12pt;
+        height: 20px;
+    }
+    .boeken #date1, #date2{
+        width: 30px;
+    }
+    .boeken #date3{
+        width: 60px;
+    }
+    .volwassenen .buttons li {
+        width:25px;
+        height:25px;
+    }
+    .volwassenen .buttons label {
+       font-size: 10pt;
+    }
+    .volwassenen {
+     }
+    .buttons2 li {
+        width:25px;
+        height:25px;
+    }
+    .buttons2 label {
+       font-size: 10pt;
+    }
+    .holdittogether{
+        flex-direction: column;
+        height: 40px;
+        justify-content: center;
+    }
+    .boeken{
+        width: 80%;
+        padding: 30px;
+        justify-content: center;
+    }
+    .divforboekenandzwembad{
+        flex-direction: column;
+    }
+    .volwassenen, .kinderen{
+        height: 70px;
+    }
+    .boeken p {
+        margin: 0;
+    }
+    .boeken .zoeken{
+        margin: 10px 0 20px 0;
+
+    }
+    .boeken img{
+        width: auto;
+        height: 25px;
+    }
+    /* ZWEMBAD________________________ */
+    .zwembad p{
+        font-size: 10pt;
+        display: none;
+    }
+    .boeken img{
+        height: 30px;
+    }
+    .zwembad{
+        width: 80%;
+        margin-top: 20px;
+        height: 60%;
+        padding: 10px;
+    }
+    .zwembad .pool{
+        height: 100%
+    }
+    .zwembad h1{
+        text-align: center;
+        font-size: 14pt;
+    }
+    #poolwifi{
+        width: 20px;
+        align-self: flex-end;
+    }
+    .divforboekenandzwembad #arrow{
+        left: 42%;
+    }
+    /* FOOTER----------------------------------------------- */
+    /* INFO________________________ */
+    /* NIEUWSBRIEF________________________ */
+    .nieuwsbrief{
+        display: none;
+    }
+    /* BETAALMETHODES________________________ */
+    .infotwo .payimages .img{
+        height: 25px;
+        width: 25px;
+    }
+    .infotwo .payimages{
+        width: 200px;
+    }
+    .infotwo .pay p{
+        font-size: 13pt;
+    }
+    .infotwo .wifiandparking .wifi p{
+        display: none;  
+    }
+    .infotwo .wifiandparking .wifi{
+        width: fit-content; 
+    }
+    .infotwo .wifiandparking .parking{
+        width: fit-content; 
+    }
+    .infotwo .wifiandparking .parking p{
+        display: none;
+    }
+    .infotwo .wifiandparking .wifi img{
+        width: 30px;
+    }
+    .infotwo .wifiandparking .parking img{
+        width: 30px;
+    }
+    .infotwo .wifiandparking{
+        flex-direction: column;
+        width: fit-content;
+    }
+    /* COPYRIGHT________________________ */
+    .copyright a{
+        width: 100px;
+        font-size: 10pt;
+    }
+    .copyright #backtotop{
+        width: 80px;
+        font-size: 10pt;
+    }
+    .copyright p{
+        width: 160px;
+        font-size: 10pt;
+    }
+}
+/** Small Device and up */
+@media (min-width: 576px) {
+    .backgroundimage {
+        /* background-image: none; */
+        /* background-color: white; */
+    }
+    *{
+        font-size: 12pt;
+    }
+    h1{
+        font-size: 16pt;
+    }
+    .language{
+        display: none;
+    }
+    /* HEADER----------------------------------------------- */  
+    header{
+        border-radius: 0px; 
+        height: 120px;
+    }
+    /* NAV________________________ */
+    header ul{
+        display: none;
+    }
+    /* MIDDLE----------------------------------------------- */
+    /* BOEKEN________________________ */
+    .volwassenen .buttons,.buttons2{
+        width: 180px;
+    }
+    .boeken .zoeken{
+        font-size: 14pt;
+        width: 180px;
+    } 
+    .boeken input{
+        font-size: 12pt;
+        height: 20px;
+    }
+    .boeken #date1, #date2{
+        width: 30px;
+    }
+    .boeken #date3{
+        width: 60px;
+    }
+    .boeken{
+    height: 450px;
+    }
+    /* ZWEMBAD________________________ */
+    .zwembad p{
+        font-size: 11pt;
+    }
+    .volwassenen .buttons li {
+        width:25px;
+        height:25px;
+    }
+    .volwassenen .buttons label {
+       font-size: 10pt;
+    }
+    .buttons2 li {
+        width:25px;
+        height:25px;
+    }
+    .buttons2 label {
+    font-size: 10pt;
+    }
+    /* FOOTER----------------------------------------------- */
+    /* INFO________________________ */
+    /* NIEUWSBRIEF________________________ */
+    /* BETAALMETHODES________________________ */
+    .infotwo .payimages .img{
+        height: 25px;
+        width: 25px;
+    }
+    .infotwo .payimages{
+        width: 100%;
+    }
+    .infotwo .pay p{
+        font-size: 16pt;
+    }
+    .infotwo .wifiandparking p{
+        font-size: 16pt;
+    }
+    .infotwo .pay{
+        width: 50%;
+    }
+    .infotwo .wifiandparking{
+        width: 50%;
+    }
+    .infotwo .wifiandparking .wifi p{
+        display: block;  
+    }
+    .infotwo .wifiandparking .parking p{
+        display: block;  
+    }
+    .infotwo .wifiandparking{
+        flex-direction: row;
+        width: fit-content;
+    }
+    .infotwo .wifiandparking .wifi img{
+        width: 50px;  
+    }
+    .infotwo .wifiandparking .parking img{
+        width: 50px;  
+    }
+    /* COPYRIGHT________________________ */
+    .copyright a{
+        width: 170px;
+        font-size: 10pt;
+    }
+    .copyright #backtotop{
+        width: 100px;
+        font-size: 10pt;
+    }
+    .copyright p{
+        width: 170px;
+        font-size: 10pt;
+    }
+}
+  
+  /** Medium Device and up */
+@media (min-width: 768px) {
+    .backgroundimage {
+        /* background-image: none; */
+        /* background-color: yellow; */
+    }
+    *{
+        font-size: 14pt;
+    }
+    h1{
+        font-size: 18pt;
+    }
+    .row.top{
+        display: block;
+    }
+    .row .top div{
+        display: block;
+    }
+    /* HEADER----------------------------------------------- */
+    header{ 
+        border-radius: 3px; 
+        height: 185px;
+    }
+    /* NAV________________________ */
+    header ul{
+        display: flex;
+    }
+    #menu{
+        display: none;
+    }
+    /* MIDDLE----------------------------------------------- */
+    /* BOEKEN________________________ */
+    .volwassenen .buttons,.buttons2{
+        width: 200px;
+    }
+    .boeken .zoeken{
+        font-size: 15pt;
+        width: 240px;
+    }
+    .boeken input{
+        font-size: 12pt;
+        height: 30px;
+    }
+    .boeken #date1, #date2{
+        width: 30px;
+    }
+    .boeken #date3{
+        width: 60px;
+    }
+    .boeken .aankomst img,.vertrek img{
+        margin-top: 20px;
+    }
+    .boeken .aankomst, .vertrek{
+        align-items: flex-start;
+    }  
+    .volwassenen .buttons li {
+        width:30px;
+        height:30px;
+    }
+    .volwassenen .buttons label {
+       font-size: 13pt;
+    }
+    .buttons2 li {
+        width:30px;
+        height:30px;
+    }
+    .buttons2 label {
+       font-size: 13pt;
+    }
+    .boeken{
+        width: 47%;
+    }
+    .divforboekenandzwembad{
+    flex-direction: row;
+    }
+    .holdittogether{
+    height: fit-content;
+    }
+    .volwassenen, .kinderen{
+        height: 100%;
+        margin-bottom: 10px;
+    }
+    .boeken p {
+        margin: 10pt;
+    }
+    .boeken .zoeken{
+        margin: 30px 0px;
+        padding: 20px 0;
+    }
+    .boeken img{
+        width: auto;
+        height: 39px;
+        margin-right: 10px;
+    }
+    /* ZWEMBAD________________________ */
+    .zwembad{
+        display: flex;
+        width: 47%;
+        flex-direction: column;
+        margin-top: 0%; 
+        padding: 30px 30px 20px 30px;
+        height: 450px;
+    }
+    .zwembad p{
+        font-size: 12pt;
+        display: block;
+    }
+    .zwembad .pool{
+        height: 50%
+    }
+    .zwembad h1{
+        text-align: left;
+    }
+    #poolwifi{
+        width: 34px;
+        padding-top: 0;
+        align-self: center;
+    }
+    .divforboekenandzwembad #arrow{
+        left: 50%;
+    }
+    /* FOOTER----------------------------------------------- */
+    /* INFO________________________ */
+    /* NIEUWSBRIEF________________________ */
+    .nieuwsbrief p{
+        font-size: 10pt;
+        line-height: 14pt;
+        width: 700px;
+    }
+    .nieuwsbrief h1{
+        font-size: 17pt;
+    }
+    .nieuwsbrief #email{
+        width: 450px;
+    }
+    .nieuwsbrief button{
+        width: 170px;
+        font-size: 18px;
+    }
+    .nieuwsbrief{
+        display: flex;
+        padding: 0 0px;
+    }
+    /* BETAALMETHODES________________________ */
+    .infotwo .payimages .img{
+        height: 30px;
+        width: 30px;
+    }
+    .infotwo .pay p{
+        font-size: 16pt;
+    }
+    .infotwo .wifiandparking p{
+        font-size: 16pt;
+    }
+    .infotwo .pay{
+        width: 50%;
+    }
+    .infotwo .wifiandparking{
+        width: 50%;
+    }
+    /* COPYRIGHT________________________ */
+    .copyright a{
+        width: 250px;
+        font-size: 12pt;
+    }
+    .copyright #backtotop{
+        width: 200px;
+        font-size: 12pt;
+    }
+    .copyright p{
+        width: 250px;
+        font-size: 12pt;
+    }
+}
+  
+  /** Large Device and up */
+@media (min-width: 992px) {
+    .backgroundimage {
+        /* background-image: none; */
+        /* background-color: orange; */
+    }
+    *{
+        font-size: 16pt;
+    }
+    h1{
+        font-size: 19pt;
+    }
+    /* HEADER----------------------------------------------- */
+    /* NAV________________________ */
+    /* MIDDLE----------------------------------------------- */
+    /* BOEKEN________________________ */
+    .boeken .aankomst img,.vertrek img{
+        margin-top: 0px;
+    }
+    .boeken .aankomst, .vertrek{
+        align-items: center;
+    }
+    .boeken input{
+        font-size: 13pt;
+        height: 30px;
+    }
+    .boeken #date1, #date2{
+        width: 30px;
+    }
+    .boeken #date3{
+        width: 60px;
+    }
+    .volwassenen .buttons,.buttons2{
+        width: 260px;
+    }
+    .boeken .zoeken{
+        font-size: 16pt;
+        width: 300px;
+    }
+    .holdittogether{
+        flex-direction: row;
+        width:100%; 
+    }
+    .boeken img{
+        height: 39px;
+    }  
+    .volwassenen .buttons li {
+        width:35px;
+        height:35px;
+    }
+    .volwassenen .buttons label {
+       font-size: 18pt;
+    }
+    .buttons2 li {
+        width:35px;
+        height:35px;
+    }
+    .buttons2 label {
+       font-size: 18pt;
+    }
+    /* ZWEMBAD________________________ */
+    .zwembad p{
+        font-size: 13pt;
+    }
+    /* FOOTER----------------------------------------------- */
+    /* INFO________________________ */
+    /* NIEUWSBRIEF________________________ */
+    .nieuwsbrief p{
+        font-size: 10pt;
+        line-height: 14pt;
+        width: 800px;
+    }
+    .nieuwsbrief h1{
+        font-size: 18pt;
+    }
+    .nieuwsbrief #email{
+        width: 470px;
+    }
+    .nieuwsbrief button{
+        width: 170px;
+        font-size: 18px;
+    }
+    .nieuwsbrief{
+        padding: 0 130px;
+    }
+    /* BETAALMETHODES________________________ */
+    .infotwo .payimages .img{
+        height: 35px;
+        width: 35px;
+    }
+    .infotwo .pay p{
+        font-size: 16pt;
+    }
+    .infotwo .wifiandparking p{
+        font-size: 16pt;
+    }
+    .infotwo .pay{
+        width: 50%;
+    }
+    .infotwo .wifiandparking{
+        width: 50%;
+    }
+    /* COPYRIGHT________________________ */
+    .copyright a,p{
+        width: 300px;
+    }
+}
+  
+  /** Extra Large Device and up */
+@media (min-width: 1200px) {
+    .backgroundimage {
+        /* background-image: none; */
+        /* background-color: red; */
+    }
+    *{
+        font-size: var(--standard-font-size);
+    }
+    h1{
+        font-size: var(  --t-headline);
+    }
+    /* HEADER----------------------------------------------- */
+    /* NAV________________________ */
+    /* MIDDLE----------------------------------------------- */
+    /* BOEKEN________________________ */
+    .boeken input{
+        font-size: 16pt;
+        height: 35px;
+
+    }
+    .boeken #date1, #date2{
+        width: 35px;
+    }
+
+    .boeken #date3{
+        width: 70px;
+    }
+    .boeken .zoeken{
+        font-size: 18pt;
+        width: 330px;
+    }
+    .buttons2, .buttons {
+        width: 260px;
+    }
+    .volwassenen .buttons,.buttons2{
+        width: 260px;
+    }
+    /* ZWEMBAD________________________ */
+    .zwembad p{
+        font-size: 14pt;
+    }
+    /* FOOTER----------------------------------------------- */
+    /* INFO________________________ */
+    /* NIEUWSBRIEF________________________ */
+    .nieuwsbrief p{
+        font-size: 12pt;
+        width: 850px;
+    }
+    .nieuwsbrief h1{
+        font-size: 20pt;
+        line-height: 19pt;
+    }
+    .nieuwsbrief #email{
+        width: 536px;
+    }
+    .nieuwsbrief button{
+        width: 184px;     
+        font-size: 20px;
+    }
+    .nieuwsbrief{
+        padding: 0 150px;
+    }
+    /* BETAALMETHODES________________________ */
+    .infotwo .payimages .img{
+        height: 35px;
+        width: 35px;
+    }
+    .infotwo .pay p{
+        font-size: 16pt;
+    }
+    .infotwo .wifiandparking p{
+        font-size: 16pt;
+    }
+    .infotwo .pay{
+        width: 50%;
+    }
+    .infotwo .wifiandparking{
+        width: 50%;
+    }
+    /* COPYRIGHT________________________ */
+    .copyright a,p{
+        width: 300px;
+    }
+}

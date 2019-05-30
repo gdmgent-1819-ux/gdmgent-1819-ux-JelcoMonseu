@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 .sg-title {
     font-size: 1.7rem;
     font-weight: 400;
@@ -14,4 +16,521 @@
     text-transform: uppercase;
     margin: 2rem 0 .5rem 0;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* KLEUREN */
+/* DIV WITH ALL COLORS IN IT */
+.allcolors{
+    display: flex;
+    justify-content: left;
+    width: fit-content;
+    box-shadow:  0 0 15px 0.5px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+}
+
+/* CLASS FOR ALL COLOR DIVS */
+.colors{
+    position: relative;
+}
+
+/* COLORS */
+#redribbon{
+    background-color: #E00040;
+    /* border: 1px black solid; */
+    height: 200px;
+    width: 200px;
+    /* margin: 50px; */
+}
+
+#buddhagold{
+    background-color: #C2B400;
+    /* border: 1px black solid; */
+    height: 200px;
+    width: 200px;
+    /* margin: 50px; */
+}
+
+#bahamablue{
+    background-color: #077394;
+    /* border: 1px black solid; */
+    height: 200px;
+    width: 200px;
+    /* margin: 50px; */
+}
+
+/* BG FOR TEXT */
+.bg{
+    background-color: #fafafa;
+    /* border: 1px black solid; */
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    bottom: 0%;
+    box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* TXT */
+.bg > ul {
+    list-style: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height: 20pt;
+    font-weight: 600;
+
+}
+
+.bg > ul > .name {
+    color: #666;
+    font-style: oblique;
+    font-size: 10pt;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* TYPOGRAFIE */
+
+/* GENERAL DIV */
+.typo{
+    /* border: 3px solid black; */
+    margin: 50pt;
+}
+
+/* NAME OF FONT */
+.typo-name{
+    /* border: 3px solid black; */
+    font-family: 'Open Sans';
+    font-size: 20pt;
+    margin-bottom: 20pt;
+}
+
+/* DISPLAY FONT */
+.typo-display{
+    /* border: 3px solid black; */
+    display: flex;
+    width: 400pt;
+    justify-content: space-around;
+}
+
+.display-semibold{
+    font-size: 40pt;
+    font-family: 'Open Sans';
+}
+.display-italic{
+    font-size: 40pt;
+    font-family: 'Open Sans';
+    font-style: italic;
+}
+
+/* FONT STYLE */
+.typo-style{
+    /* border: 3px solid black; */
+    display:flex;
+    width: 400pt;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.style-semibold{
+    font-family: 'Open Sans';
+
+}
+
+.style-italic{
+    font-family: 'Open Sans';
+    font-style: italic;
+
+}
+
+/* H1 */
+.typo > #one{
+    font-family: 'open sans';
+    font-size: 24pt;
+    line-height: 33pt;
+}
+
+/* H2 */
+.typo > #two{
+    font-family: 'open sans';
+    font-size: 20pt;
+    line-height: 27pt;
+}
+
+/* H3 */
+.typo > #three{
+    font-family: 'open sans';
+    font-size: 16pt;
+    line-height: 22pt;
+}
+
+/* H4 */
+.typo > #four{
+    font-family: 'open sans';
+    font-size: 14pt;
+    line-height: 19pt;
+}
+
+/* H5 */
+.typo > #five{
+    font-family: 'open sans';
+    font-size: 12pt;
+    line-height: 17pt;
+}
+
+/* H6 */
+.typo > #six{
+    font-family: 'open sans';
+    font-size: 10pt;
+    line-height: 14pt;
+    font-style: italic;
+}
+
+/* P */
+.typo > #seven{
+    font-family: 'open sans';
+    font-size: 18pt;
+    line-height: 24pt;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* KNOPPEN */
+
+/* ZOEK KNOP */
+.buttons{
+ display: flex;
+ justify-content: left;
+}
+
+.buttons > p{
+    display: block;
+    font-family: 'open sans';
+    margin: 68px 0 0 50px;
+    align-self: flex-start;
+
+}
+
+.button-1, .button-2{
+    margin: 50px;
+}
+
+.button-1 > p, .button-2 > p {
+ display: block;
+ font-family: 'open sans';
+ font-size: 14pt;
+ height: 40px;
+}
+
+/* BUTTON 1 */
+.button-1 > .Button-primary{
+    align-items : center;
+    background-color: #E00040;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-family: 'open sans';
+    font-size: 20pt;
+    height: 55px;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    width: 352px;
+}
+
+.button-1 > .Button-hover{
+    align-items : center;
+    background-color: rgb(226, 28, 84);
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-family: 'open sans';
+    font-size: 20pt;
+    height: 55px;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    width: 352px;
+}
+
+.button-1 > .Button-click{
+    align-items : center;
+    background-color: rgb(192, 0, 54);
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-family: 'open sans';
+    font-size: 20pt;
+    height: 55px;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    width: 352px;
+}
+
+/* BUTTON 2 */
+.button-2 > .Button-primary{
+    align-items : center;
+    background-color: #077394;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-family: 'open sans';
+    font-size: 20pt;
+    height: 55px;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    width: 352px;
+}
+
+.button-2 > .Button-hover{
+    align-items : center;
+    background-color: #0a85aa;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-family: 'open sans';
+    font-size: 20pt;
+    height: 55px;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    width: 352px;
+}
+
+.button-2 > .Button-click{
+    align-items : center;
+    background-color: #085e79;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    font-family: 'open sans';
+    font-size: 20pt;
+    height: 55px;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    width: 352px;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* FORMULIEREN */
+/* BUTTONS */
+.buttons2 {
+    /* border: 1px solid black; */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    list-style:none;
+    padding:0;
+    width: 260px;
+    margin: 20px 0 0 50px;
+}
+
+.buttons2 li {
+
+    width:35px;
+    height:35px;
+    position:relative;
+}
+
+.buttons2 label, .buttons2 input {
+   display:block;
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+}
+
+.buttons2 input[type="radio"] {
+   opacity:0.011;
+   z-index:100;
+}
+
+.buttons2 input[type="radio"]:checked + label {
+   background:var(--r-color);
+   color: white;
+}
+
+.buttons2 label {
+    padding:5px;
+    /* border:1px solid #CCC;  */
+    cursor:pointer;
+   z-index:90;
+   background:#FA628D;
+   border-radius: 6px;
+   font-size: 18pt;
+   text-align: center;
+   color: var(--r-color);
+}
+
+.buttons2 label:hover {
+    background:rgb(245, 66, 117);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.301);
+    transition: 0.3s ease-out;
+}
+
+.title{
+    margin: 50px 0 0 50px;
+}
+
+/* INPUTVELDEN */
+/* DIV MET ALLE INPUTVELDEN IN */
+ .inputtogether{
+    display: flex;
+    /* border: 1px solid black; */
+    height: fit-content;
+    margin: 25px 0 0 50px;
+}
+
+/* ALLE INPUTVELDEN */
+.inputtogether input{
+    border-radius: 6px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 16pt;
+    height: 35px;
+    margin: 0 3px;
+    padding: 0 3px;
+    display: block;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* INPUTVELD 1 & 2 */
+.inputtogether #date1, #date2{
+    width: 35px;
+}
+
+/* INPUTVELD 3 */
+.inputtogether #date3{
+    width: 70px;
+}
+
+/* EMAIL INPUT */
+.nieuwsbrief{
+    align-items: center;
+    background-color: var(--y-color);
+    box-sizing: border-box;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    margin: 25px 0 0 0;
+    padding: 0 150px;
+    width: 90%;
+}
+
+.iconandinput{
+    position: relative;
+}
+
+.iconandinput img{
+    left: 35px;
+    position: relative;
+}
+
+.nieuwsbrief #email{
+    background-color: rgba(255, 255, 255, .25);
+    border-radius: 3px 0 0 3px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 42px;
+    padding: 0 0 0 40px;
+    width: 536px;
+}
+
+.nieuwsbrief #email::placeholder{
+    color: rgba(255, 255, 255, .50);
+    font-size: 14pt;
+}
+
+.nieuwsbrief button{
+    align-items: center;
+    background-color: var(--b-color);
+    border-radius: 0 3px 3px 0;
+    border: none;
+    color: #fff;  
+    display: flex;
+    font-size: 20px;
+    height: 42px;
+    justify-content: space-around;
+    width: 184px;
+}
+
+.nieuwsbrief button:hover{
+    background-color: #0a85aa;
+    transition-duration: 0.3s;
+}
+
+.nieuwsbrief button:active{
+    background-color: #085e79;
+}
+
+/* COMPONENTEN */
+
+.background{
+    background-image: url(../images/background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+    width: 70%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 0 0;
+}
+/* blur */
+.blur{ 
+    align-items: center;
+    border-radius: 3px; 
+    /* border: 3px solid black; */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: space-around;
+    margin: 0px;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    /* transform: translate(0,-35px); */
+    width: 50%
+}
+
+/* BLUR ON blur */
+.blur::before{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -20px;
+    content:'';
+    filter:blur(10px);
+    left:-20px;
+    position: absolute;
+    right:-20px;
+    top:-20px;
+
+    background-attachment: fixed;
+    background-image: url(../images/background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* WHITE BEHIND blur */
+.blur::after{
+    background: #fff;
+    border-radius: 3px;
+    bottom: -55px;
+    content:'';
+    left:-55px;
+    position: absolute;
+    right:-55px;
+    top:-55px;
+    opacity: 0.2;
+    /* transform: translate(0,35px); */
+}
+
+.blur > .text{
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 2;
 }

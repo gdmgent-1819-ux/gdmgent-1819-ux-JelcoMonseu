@@ -1,9 +1,17 @@
+/*IMPORT FONT */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 :root {
   /**
    * Colour palette
    */
   --c-primary: hsl(190, 100%, 40%);
+  --b-color: #077394;
+  --bg-color: rgba(255, 255, 255, 0.3);
+  --grey-color: #808080;
+  --k-color: #000000;
+  --r-color: #E00040;
+  --y-color: #C2B400;
 
   /**
    * Layout
@@ -13,11 +21,15 @@
   /**
    * Typography
    */
-  --t-primary: Arial, Helvetica, sans-serif;
+  --t-primary: "open sans";
   --t-secondary: Arial, Helvetica, sans-serif;
   --t-tertiary: monospace;
 
-  --t-headline: var(--t-primary);
+  --standard-font-family: var(--t-primary);
+  --title-font-size: 20pt;
+  --standard-font-size: 18pt;
+
+  --t-headline: var(--title-font-size);
   --t-subtitle: var(--t-primary);
   --t-body: var(--t-secondary);
   --t-code: var(--t-tertiary);
